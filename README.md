@@ -1,0 +1,258 @@
+[index.html](https://github.com/user-attachments/files/33391652/index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MISINFORMATION | Think Before You Click</title>
+<style>
+  :root{
+    --navy:#0b2545;
+    --navy-dark:#081c33;
+    --blue:#1d4e89;
+    --gray:#f4f6f8;
+    --gray-dark:#5c6672;
+    --white:#ffffff;
+    --accent:#2e86de;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:Arial, Helvetica, sans-serif;background:var(--gray);color:#1f2933;line-height:1.6;}
+  a{text-decoration:none;}
+  .container{width:min(1100px,92%);margin:auto;}
+
+  header{background:var(--navy);color:var(--white);position:sticky;top:0;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,.15);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
+  .logo{font-weight:bold;font-size:1.25rem;letter-spacing:1px;}
+  .logo span{color:#7fb3ff;}
+  nav ul{display:flex;gap:10px;list-style:none;flex-wrap:wrap;}
+  nav a{color:var(--white);padding:8px 14px;border-radius:6px;font-size:.95rem;}
+  nav a:hover, nav a.active{background:var(--blue);}
+
+  .hero{background:linear-gradient(135deg,var(--navy-dark),var(--blue));color:var(--white);padding:90px 0;}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin-bottom:16px;}
+  .hero p{max-width:720px;font-size:1.1rem;color:#dbe7f5;margin-bottom:28px;}
+  .buttons{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:13px 24px;border-radius:8px;font-weight:bold;transition:.2s;}
+  .btn-primary{background:var(--white);color:var(--navy);}
+  .btn-primary:hover{background:#dbe7f5;}
+  .btn-outline{border:2px solid var(--white);color:var(--white);}
+  .btn-outline:hover{background:rgba(255,255,255,.15);}
+
+  section{padding:70px 0;}
+  .section-title{font-size:2rem;color:var(--navy);margin-bottom:10px;}
+  .section-sub{color:var(--gray-dark);max-width:760px;margin-bottom:35px;}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;}
+  .card{background:var(--white);padding:28px;border-radius:12px;border-top:5px solid var(--accent);box-shadow:0 4px 14px rgba(11,37,69,.08);}
+  .card h3{color:var(--navy);margin-bottom:10px;}
+  .card p{color:var(--gray-dark);}
+  .card-icon{font-size:2rem;margin-bottom:12px;}
+
+  .definition{background:var(--white);}
+  .definition-box{background:var(--gray);border-left:6px solid var(--navy);padding:28px;border-radius:10px;}
+  .definition-box p{font-size:1.05rem;}
+
+  .steps{counter-reset:step;}
+  .step{background:var(--white);padding:24px;border-radius:12px;box-shadow:0 4px 14px rgba(11,37,69,.08);position:relative;}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-16px;left:24px;width:38px;height:38px;background:var(--navy);color:var(--white);border-radius:50%;display:grid;place-items:center;font-weight:bold;}
+  .step h3{margin:10px 0 8px;color:var(--navy);}
+  .step p{color:var(--gray-dark);}
+
+  .resources{background:var(--navy);color:var(--white);}
+  .resources .section-title{color:var(--white);}
+  .resources .section-sub{color:#c9d8ea;}
+  .resource-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:24px;border-radius:12px;}
+  .resource-card h3{margin-bottom:8px;}
+  .resource-card a{color:#8ecbff;font-weight:bold;}
+  .resource-card a:hover{text-decoration:underline;}
+
+  .tips ul{list-style:none;display:grid;gap:14px;}
+  .tips li{background:var(--white);padding:18px 20px;border-radius:10px;box-shadow:0 3px 10px rgba(11,37,69,.07);}
+  .tips strong{color:var(--navy);}
+
+  footer{background:var(--navy-dark);color:#c9d8ea;padding:35px 0;text-align:center;}
+  footer strong{color:var(--white);}
+
+  @media(max-width:700px){
+    .nav{flex-direction:column;gap:12px;text-align:center;}
+    .hero{padding:65px 0;text-align:center;}
+    .hero p{margin:auto;margin-bottom:28px;}
+    .buttons{justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">MIS<span>INFORMATION</span></div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#guide">Guide</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#resources">Fact-Checking</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <h1>Think Before You Click</h1>
+    <p>
+      Misinformation is false or inaccurate information shared without the intention to deceive.
+      Even honest mistakes can confuse the public, damage trust, and cause harm—especially during
+      a crisis. Verify first before you share.
+    </p>
+    <div class="buttons">
+      <a href="#guide" class="btn btn-primary">Learn How to Spot It</a>
+      <a href="#toolkit" class="btn btn-outline">Use the Toolkit</a>
+    </div>
+  </div>
+</section>
+
+<section class="definition">
+  <div class="container">
+    <h2 class="section-title">What Is Misinformation?</h2>
+    <p class="section-sub">Misinformation is different from disinformation because it is usually shared by people who believe it is true.</p>
+    <div class="definition-box">
+      <p>
+        <strong>Misinformation</strong> is the unintentional sharing of false, inaccurate, or unverified information.
+        Examples include broken links, misdated pictures, outdated news, and claims that have not been proven true.
+        The person sharing it may make an honest mistake, but the information can still mislead others and create confusion.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="container">
+    <h2 class="section-title">Guide: How to Identify Misinformation</h2>
+    <p class="section-sub">Before believing or sharing online content, look for warning signs that the information may be false, misleading, or unverified.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🎣</div>
+        <h3>Clickbait Headlines</h3>
+        <p>Be cautious of exaggerated titles such as “SHOCKING!” or “You Won’t Believe This.” They are often designed to get clicks, not to provide accurate information.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Unverified Sources</h3>
+        <p>Check who published the information. Reliable posts identify the author, organization, date, and original source of the claim.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>Old or Edited Images</h3>
+        <p>Photos and videos can be taken out of context, edited, or reused from past events. Reverse-image search can help you find the original source.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚠️</div>
+        <h3>Emotional Content</h3>
+        <p>False information often tries to make people feel angry, afraid, or excited. Strong emotions can make people share before checking the facts.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📅</div>
+        <h3>Missing Dates</h3>
+        <p>Old news may be shared as if it happened recently. Always check the publication date and confirm whether the event is still relevant or accurate.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧾</div>
+        <h3>No Supporting Evidence</h3>
+        <p>Trustworthy information includes evidence such as official statements, studies, credible news reports, or links to primary sources.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit" class="tips">
+  <div class="container">
+    <h2 class="section-title">5-Step Verification Checklist</h2>
+    <p class="section-sub">Use this simple checklist before sharing any post, message, photo, or news article.</p>
+
+    <ul class="steps">
+      <li class="step">
+        <h3>Check the Source</h3>
+        <p>Identify the website, page, or person that posted the information. Prefer official news outlets, government agencies, schools, and recognized organizations.</p>
+      </li>
+      <li class="step">
+        <h3>Read Beyond the Headline</h3>
+        <p>Do not judge a post by its title alone. Read the full content to see whether the headline accurately represents the information.</p>
+      </li>
+      <li class="step">
+        <h3>Check the Date</h3>
+        <p>Confirm when the information was published. Old photos and articles are often recirculated as if they describe current events.</p>
+      </li>
+      <li class="step">
+        <h3>Verify With Other Sources</h3>
+        <p>Search for the same claim on reliable websites. If credible sources do not report it, treat the claim as unverified.</p>
+      </li>
+      <li class="step">
+        <h3>Think Before Sharing</h3>
+        <p>If you cannot confirm that the information is true, do not share it. Reporting or correcting false content helps prevent further confusion.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="resources" class="resources">
+  <div class="container">
+    <h2 class="section-title">Fact-Checking Resources</h2>
+    <p class="section-sub">Use reputable fact-checking platforms to verify claims, images, and viral posts before sharing them.</p>
+
+    <div class="cards">
+      <div class="resource-card">
+        <h3>Snopes</h3>
+        <p>Investigates viral claims, rumors, images, and internet stories.</p>
+        <a href="https://www.snopes.com" target="_blank" rel="noopener">Visit Snopes</a>
+      </div>
+      <div class="resource-card">
+        <h3>FactCheck.org</h3>
+        <p>Checks factual claims made by public figures and online sources.</p>
+        <a href="https://www.factcheck.org" target="_blank" rel="noopener">Visit FactCheck.org</a>
+      </div>
+      <div class="resource-card">
+        <h3>Google Fact Check Explorer</h3>
+        <p>Searches fact checks from multiple verified fact-checking organizations.</p>
+        <a href="https://toolbox.google.com/factcheck/explorer" target="_blank" rel="noopener">Visit Google Fact Check</a>
+      </div>
+      <div class="resource-card">
+        <h3>AFP Fact Check</h3>
+        <p>Verifies misleading photos, videos, and claims shared online.</p>
+        <a href="https://factcheck.afp.com" target="_blank" rel="noopener">Visit AFP Fact Check</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Be a Responsible Online User</h2>
+    <p class="section-sub">Sharing accurate information protects your community. A few seconds of checking can prevent confusion, panic, and the spread of false claims.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Pause</h3>
+        <p>Do not immediately react to alarming or emotional posts. Take time to read and evaluate the content.</p>
+      </div>
+      <div class="card">
+        <h3>Verify</h3>
+        <p>Use the 5-step checklist and trusted fact-checking platforms to confirm the information.</p>
+      </div>
+      <div class="card">
+        <h3>Share Responsibly</h3>
+        <p>Share only information that comes from credible sources and has been verified as accurate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>MISINFORMATION</strong> | Think Before You Click</p>
+    <p>Raising awareness about responsible sharing, source evaluation, and fact-checking.</p>
+  </div>
+</footer>
+
+</body>
+</html>
